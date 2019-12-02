@@ -64,20 +64,16 @@ const lowercase=(word1,word2)=>{
 }
  console.log("lowercase",lowercase(myDog,myCat))
 
- 
-
-
-
-// ------------------------------ Consider the following variable:
+ // ------------------------------ Consider the following variable:
 
 var myMessage = "Learning is fun!"
 
 // 3a. Write the code that logs each letter of the message using a for loop.
 //hint: "logs" in this case means "prints to the terminal console."  This is typically done with a console.log(x), where x is the string, function, etc that you wish to see in the terminal.
 
-// for(i=0; i<myMessage.lenght; i++){
-//      console.log(myMessage[i])
-//   }
+for(i=0; i<myMessage.lenght; i++){
+     console.log(myMessage[i])
+  }
 
 
  
@@ -87,19 +83,17 @@ myMessage.split('').map((letter)=>console.log(letter))
 
 // 3c. STRETCH: Write the code that logs each letter of the message using a while loop.
 
-// var i=0
-// while(i<myMessage.length){
-//     console.log(myMessage[i]);
-//     i++
-// }
+var i=0
+while(i<myMessage.length){
+    console.log(myMessage[i]);
+    i++
+}
 
 // 3d. SUPER STRETCH: Write the code that logs each letter of the message using forEach().
 
-// myMessage.split('').forEach((letter)=>{
-//     console.log(letter)
-// })
-
-
+myMessage.split('').forEach((letter)=>{
+    console.log(letter)
+})
 
 // ---------------------------- Consider the following variable:
 
@@ -123,11 +117,19 @@ console.log(" noVowels BOOOM", noVowels(222))
 
 
 // 4b. STRETCH: Update your function to return an error message if the variable is not a string. Copy and paste your function to add these changes.
-
-
-
-
-
+const vowelKiller2 = (string) => {
+  let noVowels = ""
+  for (var i = 0; i < testString.length; i++) {
+    if (typeof string !== "string") {
+      return "this is a test error message"
+    } else if (vowels.includes(string[i].toLowerCase()) === false) {
+      noVowels += string[i]
+    } else {
+      continue
+    }
+  }
+  return noVowels
+}
 
 // ------------------------------- Consider the following variable:
 
@@ -141,7 +143,8 @@ console.log(animal)
 
 //5b. Write a function that returns only the names of all the non-cats. Expected output: "Itchy" "Daffy" "Ren"
 
-
+var namesOfNonCats=toonimals.filter((value)=>value.animal!=="cat").map((value)=>value.name)
+console.log(namesOfNonCats)
 
 
 
